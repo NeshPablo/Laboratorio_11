@@ -29,10 +29,10 @@
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Agregar Nota" />
         </p>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Agregar Alumno a la Universidad" />
+            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Agregar Alumno a la Universidad" Width="554px" />
         </p>
         <p>
-            <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Agregar Universidad con sus Alumnos" />
+            <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Agregar Universidad con sus Alumnos" Width="612px" />
         </p>
     </div>
 

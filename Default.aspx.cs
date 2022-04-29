@@ -27,13 +27,12 @@ namespace Laboratorio_11
                 alumnos = JsonConvert.DeserializeObject<List<Alumno>>(json);
             }*/
         }
-       /* void GuardarDatos()
+        private void Guardar()
         {
-            string json = JsonConvert.SerializeObject(alumnos);
-            string archivo = Server.MapPath("Alumno.json");
+            string json = JsonConvert.SerializeObject(UniversidadTemp);
+            string archivo = Server.MapPath("Datos.json");
             System.IO.File.WriteAllText(archivo, json);
         }
-       */
         protected void Button3_Click(object sender, EventArgs e)
         {
             Universidad universidad = new Universidad();
@@ -42,21 +41,17 @@ namespace Laboratorio_11
 
 
             UniversidadTemp.Add(universidad);
-
-            string json = JsonConvert.SerializeObject(universidad);
-
-            string archivo = Server.MapPath("Alumnos.json");
-
-            System.IO.File.WriteAllText(archivo, json);
+            Guardar();
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
             Alumno alumno = new Alumno();
             alumno.Carne = txt_carne.Text;
-            alumno.Apellido = txt_apellido.Text;
             alumno.Nombre = txt_nombre.Text;
+            alumno.Apellido = txt_apellido.Text;
             alumno.Notas = NotasTemp.ToArray().ToList();
+           
 
             AlumnoTemp.Add(alumno);
         }
@@ -65,7 +60,7 @@ namespace Laboratorio_11
         {
             Nota nota = new Nota();
             nota.Curso = txt_punteo.Text;
-            nota.Punteo = Convert.ToInt16(txt_punteo);
+            nota.Punteo = Convert.ToInt32(txt_punteo);
 
             NotasTemp.Add(nota);
         }
